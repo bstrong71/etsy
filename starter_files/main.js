@@ -26,7 +26,7 @@ function question2 () {
         array1418.push(data[i].title);
       }
     }
-    
+
     for (var i = 0; i < array1418.length; i++) {
       console.log(array1418[i]);
     }
@@ -51,7 +51,20 @@ function question3 () {
 
 // 4: Display a list of all items who are made of wood.
 function question4 () {
-  // Answer:
+    let woodItems = [];
+    for (var i = 0; i < data.length; i++) {
+      for (var m = 0; m < data[i].materials.length; m++) {
+        if(data[i].materials[m] === "wood"){
+          woodItems.push(data[i].title);
+        }
+      }
+    }
+
+
+    // to print out answer without brackets
+    for (var i = 0; i < woodItems.length; i++) {
+    console.log(woodItems[i] + " is made of wood.");
+    }
 }
 
 
