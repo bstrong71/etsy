@@ -20,14 +20,32 @@ function question1 () {
 
 // 2: Show me how to get an array of items that cost between $14.00 and $18.00 USD
 function question2 () {
-  // Answer:
+    let array1418 = [];
+    for (var i = 0; i < data.length; i++) {
+      if((data[i].price >= 14) && (data[i].price <= 18)){
+        array1418.push(data[i].title);
+      }
+    }
+    
+    for (var i = 0; i < array1418.length; i++) {
+      console.log(array1418[i]);
+    }
 }
 
 
 
 // 3: Which item has a "GBP" currency code? Display it's name and price.
 function question3 () {
-  // Answer:
+    let britishItem = "";
+    let britishPrice;
+    for (var i = 0; i < data.length; i++) {
+      if(data[i].currency_code === "GBP"){
+        britishItem = data[i].title;
+        britishPrice = data[i].price;
+      }
+    }
+
+    console.log(britishItem + " costs " + britishPrice + " pounds.");
 }
 
 
